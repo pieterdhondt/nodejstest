@@ -4,6 +4,8 @@
   "description": "Testing out expressjs",
   "main": "server.js",
   "scripts": {
+    "restart": "pm2 startOrRestart ecosystem.config.js",
+    "deploy": "pm2 deploy ecosystem.config.js production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Pieter Dhondt",
@@ -12,5 +14,8 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "mongoose": "^4.9.3"
+  },
+  "devDependencies": {
+    "pm2": "^2.4.4"
   }
 }
